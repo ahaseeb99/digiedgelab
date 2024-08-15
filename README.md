@@ -9,8 +9,3 @@ GSAP: Implemented advanced animations for engaging and visually appealing effect
 
 **Purpose**:
 This project aims to provide DigiEdgeLab with a sleek, professional online presence that reflects their commitment to cutting-edge design and technology. Whether it's showcasing their portfolio or engaging potential clients, this website is designed to impress.
-
-👋 Hi, I’m Abdul Haseeb Q. a.k.a twistyBRAT 鬼 ];) - https://github.com/ahaseeb99
-👀 Just a devious boring typical guy skilled Front End Development | Web Development & Design | HTML & CSS | SASS | Bootstrap | JavaScript | WordPress Development | Googling | Tech Enthusiast | Learning Enthusiast & likes Anime + Manga + Comics + Gaming + Weird things and a lot of Music 🙀👽
-💞️ I’m looking to collaborate on many things with you people ❤
-📫 You can reach me at a.haseeb199@gmail.com | https://www.facebook.com/twistyBRATVA | https://www.linkedin.com/in/abdul-haseeb-qamar/ | https://www.instagram.com/abdul_haseeb_qamar | https://linktr.ee/twistyBRAT?subscribe
