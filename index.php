@@ -30,7 +30,56 @@
 
    <!-- END META ROBOT, TAGS, CONTENT -->
 
+
+<?php
+
+function get_IP_address()
+{
+    foreach (array('HTTP_CLIENT_IP',
+                   'HTTP_X_FORWARDED_FOR',
+                   'HTTP_X_FORWARDED',
+                   'HTTP_X_CLUSTER_CLIENT_IP',
+                   'HTTP_FORWARDED_FOR',
+                   'HTTP_FORWARDED',
+                   'REMOTE_ADDR') as $key){
+        if (array_key_exists($key, $_SERVER) === true){
+            foreach (explode(',', $_SERVER[$key]) as $IPaddress){
+                $IPaddress = trim($IPaddress); // Just to be safe
+
+                if (filter_var($IPaddress,
+                               FILTER_VALIDATE_IP,
+                               FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE)
+                    !== false) {
+
+                    return $IPaddress;
+                }
+            }
+        }
+    }
+}
+
+$ip = get_IP_address();
+
+$loc = file_get_contents("http://ip-api.com/json/$ip");
+$loc_data = json_decode($loc, true); // Decode JSON string into an associative array
+
+
+if ($loc_data && isset($loc_data['country'])) {
+    global $country;
+    $country = $loc_data['country'];
+}
+
+ if($country == "United Kingdom") { ?>
+
+<script defer="defer" src="static/js/main-landing-uk.js"></script>
+
+<?php }else{ ?> 
+
    <script defer="defer" src="static/js/main-landing.js"></script>
+
+<?php } ?>
+
+   
 
    <link href="static/css/main.css" rel="stylesheet">
 

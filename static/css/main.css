@@ -19919,3 +19919,14 @@ section:last-child .privacy__article {
     color: #fff;
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(234deg) brightness(104%) contrast(104%);
 }
+
+.footer__location {
+    display: flex;
+    gap: 5px;
+}
+
+.footer-label__address,
+.footer-label__phone,
+.footer-label__gap {
+  font-size: 13px;
+}
